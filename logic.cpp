@@ -2,29 +2,31 @@
 using namespace std;
 
 
-void pattern(int x,int y){
+void pattern(int x){
 
-    int i,j;
-
+    int i,j,k;
+    k=1;
 
     for(i=0;i<x;i++){
-        for(j=0;j<y;j++){
+        
+        for(j=0;j<k;j++){
             cout<<" * ";
 
         }
 
         cout<<endl;
+        k++;
     }
 }
 
 int main(){
-    int x,y;
+    int x;
 
     cout <<"Enter the Number of rows and Colummns: " << endl;
 
     cin >> x;
-    cin >> y;
 
-    pattern(x,y);
+
+    pattern(x);
 
 }
