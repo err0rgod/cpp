@@ -16,13 +16,13 @@ void pattern(int x){
 
 
 int main(){
-    int x;
+    int t;
 
-    cout <<"Enter the Number of rows and Colummns: " << endl;
+    cin>>t;
 
-    cin >> x;
-
-
-    pattern(x);
-
+    for(int i =0 ; i<t;i++){
+        int n;
+        cin>>n;
+        pattern(n);
+    }
 }
