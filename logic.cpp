@@ -4,20 +4,16 @@ using namespace std;
 
 void pattern(int x){
 
-    int i,j,k;
-    k=1;
-
-    for(i=0;i<x;i++){
-        
-        for(j=0;j<k;j++){
-            cout<<" * ";
-
+    for (int i=0;i<=x;i++){
+        for (int j = 1 ; j<=i; j++){
+            cout<< j;
         }
-
         cout<<endl;
-        k++;
     }
+
+
 }
+
 
 int main(){
     int x;
