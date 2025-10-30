@@ -4,11 +4,11 @@ using namespace std;
 
 void pattern(int x){
 
-    for (int i=0;i<=x;i++){
-        for (int j = 1 ; j<=i; j++){
-            cout<< i;
+    for (int i=x;i>=0;--i){
+        for (int j = 0 ; j<=i; j++){
+            cout<< " * ";
         }
-        cout<<endl;
+        cout <<endl;
     }
 
 
@@ -17,12 +17,14 @@ void pattern(int x){
 
 int main(){
     int t;
-
+    cout << "enter the no of row: ";
     cin>>t;
+    pattern(t);
+    //cin>>t;
 
-    for(int i =0 ; i<t;i++){
-        int n;
-        cin>>n;
-        pattern(n);
-    }
+   // for(int i =0 ; i<t;i++){
+     //   int n;
+       // cin>>n;
+        //pattern(n);
+    //}
 }
