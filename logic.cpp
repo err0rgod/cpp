@@ -4,9 +4,15 @@ using namespace std;
 
 void pattern(int x){
 
-    for (int i=x;i>=0;--i){
-        for (int j = 0 ; j<=i; j++){
-            cout<< " * ";
+    for (int i=0;i<x;i++){
+        for (int j = 0 ; j<x-i-1; j++){
+            cout<< "   " ;
+        }
+        for (int j = 0 ; j<i*2+1;j++){
+            cout<<" * ";
+        }
+        for (int j = 0 ; j<x-i-1; j++){
+            cout<< "   " ;
         }
         cout <<endl;
     }
