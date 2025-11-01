@@ -6,12 +6,15 @@ int main() {
 	string a;
 
     
-    string b;
+    string b; 
     
     cin>>a;
 
     cin>>b;
 
+
+
+    
 
     //int x,y;
     
