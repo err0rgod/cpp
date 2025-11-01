@@ -61,6 +61,8 @@ int main() {
     anew[0]=b[0];
     bnew[0] = a[0];
     
+
+    
     
     cout<<lena<<" "<<lenb<<endl;
     cout<<c<<endl;
