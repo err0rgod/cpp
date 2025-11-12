@@ -9,8 +9,14 @@ int main(){
             cout<<("*");
 
         }
-        for(int j = n-1;j<n-1;j--){
-            cout<<"x";
+        
+       
+        cout<<endl;
+    }
+    for(int i = n-1;i>1;i--){
+        for(int j = 1;j<i;j++){
+            cout<<"*";
+
         }
         cout<<endl;
     }
