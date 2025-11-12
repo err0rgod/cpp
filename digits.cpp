@@ -14,12 +14,12 @@ int main(){
         n /= 10;
         s++;
     }
-    for(int i=s;i<0;i++){
+    for(int i=s;i>s;i++){
 
         int q = w%10;
         int w = w/10;
         cout<< q;
 
     }
-    cout<<n/10;
+    cout<<w%10;
 }
