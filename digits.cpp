@@ -1,15 +1,18 @@
-#include <iostream>
-
+#include<iostream>
 using namespace std;
 
-int main(){
-    int n= 384683;
- 
+int main() {
+	int n;
+	cin>>n;
+	int revnum=0;
+	while(n>0){
+		int ld=n%10;
+		revnum = (revnum*10)+ld;
+		n= n/10;
 
-    while(n>0){
-        int q=n%10;
-        cout<<q;
-        n=n/n;
+		
 
-   }
+	}
+	cout<<revnum;
+	
 }
