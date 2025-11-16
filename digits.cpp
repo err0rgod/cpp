@@ -14,5 +14,9 @@ int main() {
 
 	}
 	cout<<revnum;
+
+    if(revnum == n){
+        cout<< "Number is palindrome";
+    }
 	
 }
