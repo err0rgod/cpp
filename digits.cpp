@@ -4,19 +4,21 @@ using namespace std;
 int main() {
 	int n;
 	cin>>n;
+    int origin=n;
 	int revnum=0;
 	while(n>0){
 		int ld=n%10;
-		revnum = (revnum*10)+ld;
+		revnum = (revnum)+(ld*ld*ld);
 		n= n/10;
 
 		
 
 	}
-	cout<<revnum;
 
-    if(revnum == n){
-        cout<< "Number is palindrome";
+    if(revnum == origin){
+        cout<< "True";
+    }else{
+        cout<<"false";
     }
 	
 }
