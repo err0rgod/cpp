@@ -1,24 +1,11 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
-int main() {
-	int n;
-	cin>>n;
-    int origin=n;
-	int revnum=0;
-	while(n>0){
-		int ld=n%10;
-		revnum = (revnum)+(ld*ld*ld);
-		n= n/10;
-
-		
-
-	}
-
-    if(revnum == origin){
-        cout<< "True";
-    }else{
-        cout<<"false";
+int main(){
+	int n = 10;
+	 for (int i=1 ; i<n;i++){
+        if(n%i==0){
+            cout<<i<<" ";
+        }
     }
-	
 }
