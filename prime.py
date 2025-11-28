@@ -1,8 +1,9 @@
 a = int(input("test"))
 c=0
+d=0
 while a!=0:
-    #print(a%10)
+    c=a%10
     a= a//10
-    c=c+1
+    d=d*10+c
 
-print(c)
+print(d)
