@@ -3,6 +3,11 @@
 int main() {
     int num, reversed_num = 0, remainder;
 
+
+
+
+    
+
     std::cout << "Enter an integer: ";
     std::cin >> num;
 
