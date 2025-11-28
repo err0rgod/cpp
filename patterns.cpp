@@ -1,16 +1,24 @@
 #include <iostream>
-using namespace std;
 
-void pattern1(int n){
-    
-}
+int main() {
+    int num, reversed_num = 0, remainder;
 
-int main(){
-    int t;
-    cin>>t;
-    for(int i=0;i<=t;i++){
-        int n;
-        cin>>n;
-        pattern1(n)
+    std::cout << "Enter an integer: ";
+    std::cin >> num;
+
+    // Loop until the original number becomes 0
+    while (num != 0) {
+        // Get the last digit
+        remainder = num % 10; 
+        
+        // Build the reversed number
+        reversed_num = reversed_num * 10 + remainder; 
+        
+        // Remove the last digit from the original number
+        num /= 10; 
     }
+
+    std::cout << "Reversed Number = " << reversed_num << std::endl;
+
+    return 0;
 }
