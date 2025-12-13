@@ -1,16 +1,22 @@
-#include<iostream>
+#include <iostream>
 int cnt = 0;
-void recurs(){
-    
+void recurs(int i, int n)
+{
 
-    std::cout<<cnt<<std::endl;
+    std::cout << n << std::endl;
 
-    cnt++;
+    if (n < i)
+    {
+        return;
+    }
 
-    recurs();
+    recurs(i, n - 1);
 }
 
-
-int main(){
-    recurs();
+int main()
+{
+    int n;
+    int i =0;
+    std::cin >> n;
+    recurs(i, n);
 }
