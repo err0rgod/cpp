@@ -8,6 +8,7 @@ void recurs(int i, int n)
     if (n < i)
     {
         return;
+        
     }
 
     recurs(i, n - 1);
