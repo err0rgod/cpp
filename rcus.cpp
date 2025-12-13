@@ -3,13 +3,13 @@ int cnt = 0;
 void recurs(int i, int n)
 {
 
-    std::cout << n << std::endl;
 
     if (n < i)
     {
         return;
 
     }
+    std::cout<< n << std::endl;
 
     recurs(i, n - 1);
 }
