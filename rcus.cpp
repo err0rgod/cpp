@@ -8,7 +8,7 @@ void recurs(int i, int n)
     if (n < i)
     {
         return;
-        
+
     }
 
     recurs(i, n - 1);
@@ -17,7 +17,7 @@ void recurs(int i, int n)
 int main()
 {
     int n;
-    int i =0;
+    int i =1;
     std::cin >> n;
     recurs(i, n);
 }
