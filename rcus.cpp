@@ -1,21 +1,20 @@
 #include <iostream>
 using namespace std;
+int n[5] = {1, 35, 2, 5, 6};
 
-int recurs(int sum)
+int recurs(int n)
 {
+
+    if (n<=1) return n;
+
+    int last = recurs(n-1);
+    int slast = recurs(n-2);
     
-    
-    if (sum == 0)
-    {
-        return 1;     
-    }
-    return sum * recurs(sum-1);
+    return last + slast;
 }
 int main()
 {
     int n;
-    std::cin >> n;
-    int x = recurs(n);
-
-    cout<<x<<endl;
+    cin>>n;
+    cout<<recurs(n)<<endl;
 }
