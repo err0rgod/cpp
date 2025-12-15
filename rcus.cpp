@@ -1,20 +1,18 @@
 #include <iostream>
-int cnt = 0;
-void recurs(int i, int n)
-{
+using namespace std;
 
-    if (n < i)
+void recurs(int i, int sum)
+{
+    if (i < 1)
     {
+        cout << sum << endl;
         return;
     }
-    std::cout << n << std::endl;
-    recurs(i, n - 1);
+    recurs(i - 1, sum + i);
 }
-
 int main()
 {
     int n;
-    int i = 1;
     std::cin >> n;
-    recurs(i, n);
+    recurs(n, 0);
 }
