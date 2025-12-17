@@ -1,43 +1,32 @@
 #include <iostream>
-#include<bits/stdc++.h>
 using namespace std;
-int n[5] = {1, 35, 2, 5, 6};
+
+int main(){
+    //int arr[5]= {23,13,4,1,5};
+    int arr[70] = {34, -12, 89, 45, 0, 67, -90, 23, 56, 12,99, -45, 18, 76, 3, -1, 54, 38, 91, 6,-33, 47, 82, 14, 5, 63, -70, 28, 39, 10,77, -8, 21, 60, 4, 88, -19, 31, 52, 7,95, -100, 26, 49, 11, 68, 2, -55, 80, 9,150, 200, -300, 400, 500, -600, 700, 800, 900, -1000,42, 73, -64, 85, 16, 27, 58, -91, 66, 19};
+
+    int a = INT_MAX;
+    int b = INT_MIN;
+    int  min;
+    int max;
 
 
-int main()
-{
-   
-    
-    unordered_map<int, int> mpp;
-    int arr[5] = {2,5,2,1,4};
-    for(int i = 0; i<5; i++){
+    for(int i = 0 ; i<70; i++){
+        int num = arr[i];
+     
+
+        if(num < a){
+            a=arr[i];
+            min = num;
+        }
+        if(num >b ){
+            b=arr[i];
+            max = num;
+        }
         
-        mpp[arr[i]++];
 
     }
 
-    
-    int maxf = INT_MIN , minf = INT_MAX;
-
-    int maxelem= -1, minelem = -1 ;
-
-    for(auto &p : mpp){
-        int num = p.first;
-        int count  = p.second;
-
-        if(count > maxf){
-            maxf = count;
-            maxelem = num;
-
-        }
-        if(count < minf){
-            minf = count;
-            minelem = num;
-
-        }
-
-    }
-    cout<<"High freq element is : "<< maxelem << " and freq is : " << maxf<<endl;
-    cout<<"lowest one is : " << minelem << " and freq is : "<< minf<<endl;
-
+    cout << "minimum num is : " << min <<endl;
+    cout << "maximum num is : " << max <<endl;
 }
