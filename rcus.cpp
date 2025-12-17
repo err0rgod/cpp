@@ -11,6 +11,7 @@ int main()
     int b = INT_MIN;
     int min;
     int max;
+    int c,d;
 
     for (int i = 0; i < 5; i++)
     {
@@ -19,12 +20,14 @@ int main()
         if (num < a)
         {
             a = arr[i];
+            c = i;
             min = num;
         }
         if (num > b)
         {
             b = arr[i];
             max = num;
+            d= i;
         }
     }
 
