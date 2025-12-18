@@ -1,15 +1,27 @@
 #include <iostream>
-#include <vector>
+#include <cmath>
 using namespace std;
 
 int main()
 {
-    vector<int> vec = {1, 2, 3, 1, 3};
-    int ans = 0;
-
-    for (int val : vec)
+    int n = 4;
+    if (n < 2)
     {
-        ans = ans ^ val;
+        cout << "not prime\n";
+        return 0;
     }
-    cout << ans << endl;
+
+    bool isPrime = true;
+    int limit = static_cast<int>(sqrt(n));
+    for (int i = 2; i <= limit; ++i)
+    {
+        if (n % i == 0)
+        {
+            isPrime = false;
+            break;
+        }
+    }
+
+    cout << (isPrime ? "prime\n" : "not prime\n");
+    return 0;
 }
