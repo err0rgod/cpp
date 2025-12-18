@@ -38,7 +38,8 @@ void insertion_sort(int arr[], int n){
 int main()
 {
     int n = 6;
-    int arr[6] = {13, 46, 24, 52, 10, 9};
+    int arr[10]={10,9,8,7,6,5,4,3,2,1};
+    //int arr[6] = {13, 46, 24, 52, 10, 9};
     bubble_sort(arr, n);
     for (int i = 0; i < n; i++)
         cout << arr[i] << " ";
