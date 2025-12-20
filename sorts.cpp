@@ -18,8 +18,7 @@ void selection_sort(int arr[], int n)
     }
 }
 
-void bubble_sort(int arr[], int n)
-{
+void bubble_sort(int arr[], int n){
     for (int i = n - 1; i >= 1; i--)
     {
         for (int j = 0; j <= i - 1; j++)
@@ -90,6 +89,34 @@ void mergesort(vector<int>& arr, int st, int end)
         merge(arr, st, mid, end);
     }
 }
+
+int partition(vector<int> &arr, int st, int end){
+    int idx = st-1;
+    int pivot =  arr[end];
+
+    for(int j =st;j<end; j++){
+        if(arr[j]<=pivot){
+            idx++;
+            swap(arr[j], arr[idx]);
+        }
+    }
+    idx++;
+    swap(arr[end],arr[idx]);
+    return idx;
+
+    
+}
+
+void quicksort(vector<int> &arr, int st , int end){
+    if(st<end){
+        int pividx = partition(arr, st , end);
+
+        quicksort(arr, st, pividx -1);
+        quicksort(arr, pividx +1 , end);
+    }
+}
+
+
 int main()
 {
     // int st=0;
@@ -99,7 +126,7 @@ int main()
 
     // int arr[6] = {13, 46, 24, 52, 10, 9};
     // bubble_sort(arr, n);
-    mergesort(arr, 0, arr.size() - 1);
+    quicksort(arr, 0, arr.size() - 1);
     for (int i : arr)
     {
         cout << i << " ";
