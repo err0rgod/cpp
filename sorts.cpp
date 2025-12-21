@@ -94,6 +94,9 @@ int partition(vector<int> &arr, int st, int end){
     int idx = st-1;
     int pivot =  arr[end];
 
+
+    
+
     for(int j =st;j<end; j++){
         if(arr[j]<=pivot){
             idx++;
