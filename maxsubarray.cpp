@@ -10,7 +10,6 @@ int kadanes(int n,int arr[]){
         a+=arr[i];
 
 
-        
         maxsum=max(maxsum,a);
         if(a<0) a = 0;
     }
