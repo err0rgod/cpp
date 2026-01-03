@@ -8,6 +8,9 @@ int kadanes(int n,int arr[]){
     int a = 0;
     for(int i =0;i<n;i++){
         a+=arr[i];
+
+
+        
         maxsum=max(maxsum,a);
         if(a<0) a = 0;
     }
