@@ -1,3 +1,3 @@
-import conc
+from conc import *
 
-print(conc.add(2,2))
+print(add(5,3))
