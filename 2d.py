@@ -6,7 +6,7 @@ import time
 def tictoc(func):
     def wrapper(*args,**kwargs):
         t1 = time.time()
-        func()
+        func(*args,**kwargs)
         t2 = time.time()-t1
         print(f"took {t2} seconds")
     return wrapper
@@ -48,5 +48,5 @@ def rotate_matrix_90(matrix: Sequence[Sequence[int]]) -> List[List[int]]:
 if __name__ == "__main__":
     # small demo / smoke tests
     
-    print("stats:", compute_stats([1, 2, 3, 4, 5]))
-    print("rotated:", rotate_matrix_90([[1, 2, 3], [4, 5, 6]]))
+    compute_stats([1, 2, 3, 4, 5])
+    rotate_matrix_90([[1, 2, 3], [4, 5, 6]])
