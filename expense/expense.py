@@ -2,7 +2,7 @@ class invalidexpenseerror(Exception):
     """Raised when an error occurs"""
     pass
 
-class expense:
+class Expense:
     def __init__(self,title: str, amount : float, category: str):
         if amount <=0:
             raise invalidexpenseerror("Amount cannot be smaller than zero")
