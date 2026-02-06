@@ -1,5 +1,6 @@
 from expense import Expense
 from manager import expensemanager
+from exceptions import invalidexpenseerror
 
 
 def main():
@@ -16,14 +17,19 @@ def main():
         choice = input("Choose an option: ")
 
         if choice == "1":
-            title = input("Title: ")
-            amount = float(input("Amount: "))
-            category = input("Category: ")
+            try:
+                title = input("Title: ")
+                amount = float(input("Amount: "))
+                category = input("Category: ")
 
-            expense = Expense(title, amount, category)
-            manager.add_expense(expense)
+                expense = Expense(title, amount, category)
+                manager.add_expense(expense)
 
-            print("✅ Expense added successfully")
+                print("✅ Expense added successfully")
+            except ValueError:
+                print(" Amount must be a number")
+            except invalidexpenseerror as e:
+                print(f"{e}")
 
         elif choice == "2":
             manager.list_expense()

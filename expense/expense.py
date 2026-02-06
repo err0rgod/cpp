@@ -1,11 +1,13 @@
-class invalidexpenseerror(Exception):
-    """Raised when an error occurs"""
-    pass
+from exceptions import invalidexpenseerror
 
 class Expense:
     def __init__(self,title: str, amount : float, category: str):
-        if amount <=0:
-            raise invalidexpenseerror("Amount cannot be smaller than zero")
+        if not title.strip():
+            raise invalidexpenseerror("Title cannot be empty")
+        if amount <= 0:
+            raise invalidexpenseerror("Amount should be greater than Zero")
+        if not category.strip():
+            raise invalidexpenseerror("Category cannot be empty")
         
         self.title = title
         self.category = category

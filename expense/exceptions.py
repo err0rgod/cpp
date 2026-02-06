@@ -1,0 +1,2 @@
+class invalidexpenseerror(Exception):
+    pass
