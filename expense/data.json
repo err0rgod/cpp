@@ -1,0 +1,37 @@
+[
+    {
+        "title": "Sandwich",
+        "amount": 20.0,
+        "Category": "Food"
+    },
+    {
+        "title": "Paranthe",
+        "amount": 30.0,
+        "Category": "food"
+    },
+    {
+        "title": "Ice cream",
+        "amount": 20.0,
+        "Category": "food"
+    },
+    {
+        "title": "file",
+        "amount": 210.0,
+        "Category": "study"
+    },
+    {
+        "title": "drawing book",
+        "amount": 95.0,
+        "Category": "study"
+    },
+    {
+        "title": "thali",
+        "amount": 60.0,
+        "Category": "food"
+    },
+    {
+        "title": "Milk",
+        "amount": 10.0,
+        "Category": "food"
+    }
+]
