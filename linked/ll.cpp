@@ -82,12 +82,40 @@ public:
             }
         }
     }
-    void insertll(int val,int index){
-        if(index <0) return;
-        if(index == 0) pushfront(val);
-        else{
-            
+    void reversell(){
+        node* prev =NULL;
+        node* current = head;
+        node* next = NULL;
+        while(current){
+            next = current->next;
+            current->next = prev;
+            prev = current;
+            current = next;
         }
+        
+    }
+    void insertll(int val, int index)
+    {
+        if (index < 0)
+            return;
+        if (index == 0)
+        {
+            push_front(val);
+            return;
+        }
+        node *temp = head;
+        for (int i = 0; i < index - 1; i++)
+        {
+            if (temp == NULL)
+            {
+                cout << "Invalid Position hai bro" << endl;
+                return;
+            }
+            temp = temp->next;
+        }
+        node *newnode = new node(val);
+        newnode->next = temp->next;
+        temp->next = newnode;
     }
     void printll()
     {
@@ -98,6 +126,21 @@ public:
             temp = temp->next;
         }
         cout << "\nLinked List printed succesfully";
+    }
+    int find(int val)
+    {
+        node *temp = head;
+        int index = 0;
+        while (temp)
+        {
+            if (temp->data == val)
+                return index;
+            if (temp->next == NULL)
+                return -1;
+            temp = temp->next;
+            index++;
+        }
+        return -1;
     }
 };
 
@@ -112,7 +155,12 @@ int main()
     l1.push_front(9);
     l1.push_back(67);
     cout << " Insertion succesfull\n";
-    l1.pop_front();
-    l1.pop_back();
+    // l1.pop_front();
+    // l1.pop_back();
+    l1.insertll(23, 1);
+    // int index = l1.find(23);
     l1.printll();
+    l1.reversell();
+    l1.printll();
+    // cout << "The value 23 is at : " << index << endl;
 }

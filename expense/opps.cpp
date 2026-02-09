@@ -5,6 +5,12 @@ class teacher{
 private:
     float salary;
 public:
+    teacher(string name,string dept, string subject, float salary){
+        this-> name = name;
+        this-> dept = dept;
+        this->salary =salary;
+        this->subject = subject ;
+    }
     //data / 
     string name;
     string dept;
@@ -27,13 +33,7 @@ public:
 
 int main()
 {
-    teacher t1;
-    teacher t2;
-    t1.name = "Nirbhay";
-    t1.dept = "CS";
-    t1.subject = "C++";
-    t1.setsal(200000);
-    cout<<t1.getsal()<<endl;
-    t1.getsal();
+    teacher t1("Nirbhay" ,"CS","C++",300000);
+    cout << t1.name<<endl;
     return 0;
 }
