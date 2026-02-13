@@ -12,7 +12,7 @@ public:
     node(int data1)
     {
         data = data1;
-        next = nullptr;
+        next = NULL;
     }
 };
 class ll
@@ -24,7 +24,7 @@ public:
     ll()
     {
         head = tail = NULL;
-    }
+    }   
     void push_front(int val)
     {
         node *newnode = new node(val);
