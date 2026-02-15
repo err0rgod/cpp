@@ -5,4 +5,5 @@ r = requests.get("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVWYSOQw
 i = Image.open(BytesIO(r.content))
 fp=open("img.jpeg",'wb')
 i.save(fp)
+
 fp.close()
