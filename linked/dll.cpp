@@ -16,9 +16,6 @@ public:
 
 class dll
 
-
-
-
 {
     Node *head;
     Node *tail;
@@ -51,19 +48,24 @@ public:
             temp = temp->next;
         }
     }
-    void rprint(){
-        Node* temp = tail;
-        while(temp){
+    void rprint()
+    {
+        Node *temp = tail;
+        while (temp)
+        {
             cout << temp->val << endl;
             temp = temp->prev;
         }
     }
-    void push_back(int val){
-        Node* newnode = new Node(val);
-        if(tail == NULL){
+    void push_back(int val)
+    {
+        Node *newnode = new Node(val);
+        if (tail == NULL)
+        {
             head = tail = newnode;
         }
-        else{
+        else
+        {
             newnode->prev = tail;
             tail->next = newnode;
             tail = newnode;
