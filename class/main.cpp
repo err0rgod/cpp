@@ -2,9 +2,15 @@
 
 class Log{
 public:
-    const int LogLevelError = 0;
-    const int LogLevelWarning = 1;
-    const int LogLevelInfo = 2;
+    enum level
+    {
+        error,
+        warning,
+        info
+    };  
+    const int LogLevelError = error;
+    const int LogLevelWarning = warning;
+    const int LogLevelInfo = info;
 
 private:
     int m_LogLevel;
