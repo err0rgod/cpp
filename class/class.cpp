@@ -1,9 +1,9 @@
 #include <iostream>
 
-
-class entity{
+class entity
+{
 public:
-    int x,y;
+    int x, y;
     // cunstructor used to initialise the values as soon as a member of the class is created
     entity()
     {
@@ -11,7 +11,7 @@ public:
         y = 1;
         std::cout << "created\n";
     }
-    // preseeded value cunstructor 
+    // preseeded value cunstructor
     // entity(int X, int Y)
     // {
     //     x =X;
@@ -22,14 +22,13 @@ public:
     {
         std::cout << "Destroyed\n";
     }
-    void print(){
-        std::cout << x << " "<< y<<std::endl;
+    void print()
+    {
+        std::cout << x << " " << y << std::endl;
     }
 };
-
-
-
-int main(){
+int main()
+{
     entity e;
     e.print();
 }
