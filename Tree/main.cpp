@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#define cout std::cout
 
 class entity{
 private:
@@ -8,7 +9,7 @@ private:
 public:
     int getname() const{
         cnt++;
-        std::cout<<cnt<<std::endl;
+        cout<<cnt<<std::endl;
         return name;
     }
 };
@@ -16,9 +17,6 @@ public:
 
 int main(){
     entity e;
-    e.getname();
-    e.getname();
-    e.getname();
-    e.getname();
-    e.getname();
+    void* ptr = &e;
+    cout << ptr<<std::endl;
 }
